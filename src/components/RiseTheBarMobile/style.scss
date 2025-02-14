@@ -1,0 +1,30 @@
+.bg-half-moon-gradient-red {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background-image: url("./half-moon-gradient-red.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-half-moon-gradient-blue {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background-image: url("./half-moon-gradient-blue.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.blue-container {
+  box-sizing: border-box;
+  border: 6px solid red;
+}
+
+.rise-the-bar {
+  .group {
+    transition: transform 0.5s, opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

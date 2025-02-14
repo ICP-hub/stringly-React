@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/path/to/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("/path/to/fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/path/to/fonts/SFProDisplay-Bold.woff2") format("woff2"),
+    url("/path/to/fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  scroll-behavior: smooth;
+}
+
+//Navbar slideing
+.navbar {
+  transition: background-color 0.4s ease-out;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in;
+}
+.glossy-white {
+  background: linear-gradient(145deg, #6a6c729d, #e6e6e67c);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.glossy-white-scrolled {
+  background: linear-gradient(145deg, #151515ca, #3b3a3ad1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white !important;
+}
+
+.nav.slide-in {
+  animation: slide-nav-in 1s forwards;
+}
+
+.nav.slide-out {
+  animation: slide-nav-out 1s backwards;
+}
+
+@keyframes slide-nav-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-nav-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.card-image {
+  transition: transform 0.9s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  transition: bottom 3s ease;
+}
+
+.card:hover .card-content {
+  bottom: 3px;
+}
+
+.card-description {
+  transition: opacity 0.9s ease;
+}
+
+.card:hover .card-description {
+  opacity: 1;
+}
+
+.card-button {
+  transform: translateX(-100%);
+  transition: transform 1s ease;
+}
+
+.card:hover .card-button {
+  transform: translateX(0);
+}
+
+.learnMore {
+  transition: transform 1s ease, opacity 0.5s ease;
+  transform: translateX(0);
+}
+
+.card:hover .learnMore {
+  transform: translateX(90px);
+}
+
+/* Adding specific transitions for text change */
+.learnMore span {
+  transition: opacity 0.5s ease;
+}
+
+.learnMore .default-text {
+  opacity: 1;
+}
+
+.learnMore .hover-text {
+  opacity: 0;
+  padding-bottom: 10px;
+}
+
+.card:hover .learnMore .default-text {
+  opacity: 0;
+}
+
+.card:hover .learnMore .hover-text {
+  opacity: 1;
+}
+
+.card-image1 {
+  transition: transform 0.4s ease;
+}
+
+.card1:hover .card-1 {
+  transform: scale(1.1);
+}
+
+.card-content1 {
+  transition: top 1s ease;
+}
+
+.card1:hover .card-content1 {
+  top: 120px;
+}
+
+.card-description1 {
+  transition: opacity 0.5s ease;
+}
+
+.card1:hover .card-description1 {
+  opacity: 1;
+}
+
+.card1-button1 {
+  position: absolute;
+  transform: translateX(-150%);
+  transition: transform 1s ease;
+}
+
+.card1:hover .card1-button1 {
+  transform: translateX(30%);
+}
+
+.card1:hover .learnMore1 {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+//about page css
+
+.lili {
+  animation: gigi 1s ease forwards;
+  transform: translateY(300px);
+  transition: 2s ease;
+  opacity: 1;
+}
+
+@keyframes gigi {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slider img {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s ease-in-out;
+  border-radius: 31.96px 0px 0px 0px;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+
+.jojo {
+  transform: translateX(1800);
+  overflow-x: hidden;
+}
+
+// @media (min-width : 1440px){
+//     .mySwiper {
+//         height: 610 !important;
+//         min-width: 100%;
+//         width: 100%;
+//         /* Use full width on smaller screens */
+//     }
+// }
