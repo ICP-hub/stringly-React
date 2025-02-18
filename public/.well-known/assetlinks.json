@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "com.example.stringly",
+      "package_name": "com.stringly",
+      "sha256_cert_fingerprints": ["1B:CD:1D:43:1E:19:92:F0:A0:D7:90:1E:6F:00:69:11:BB:C5:89:40:62:0B:35:B9:91:72:17:23:9E:A4:CF:04"]
+    }
+  }]
+  
